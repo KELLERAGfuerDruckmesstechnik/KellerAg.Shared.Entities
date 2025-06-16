@@ -62,7 +62,7 @@ jobs:
         run: dotnet build ${{ env.PROJECT_PATH }} --configuration Release --no-restore
 
       - name: Run tests
-        run: dotnet test KellerAg.Shared.Entities.Tests/KellerAg.Shared.Entities.Tests.csproj --configuration Release --no-build --verbosity normal
+        run: dotnet test Source --configuration Release --verbosity normal
 
       - name: Pack NuGet package
         run: |
