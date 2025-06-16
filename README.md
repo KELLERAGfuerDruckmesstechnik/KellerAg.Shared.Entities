@@ -1,0 +1,1 @@
+# KellerAg.Shared.Entities
