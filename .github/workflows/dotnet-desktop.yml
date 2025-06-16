@@ -7,9 +7,9 @@ on:
   workflow_dispatch:
 
 env:
-  PROJECT_PATH: KellerAg.Shared.Entities/KellerAg.Shared.Entities.csproj
-  NUSPEC_PATH: KellerAg.Shared.Entities/KellerAg.Shared.Entites.nuspec
-  OUTPUT_PATH: KellerAg.Shared.Entities/nuget_output
+  PROJECT_PATH: Source/KellerAg.Shared.Entities/KellerAg.Shared.Entities.csproj
+  NUSPEC_PATH: Source/KellerAg.Shared.Entities/KellerAg.Shared.Entites.nuspec
+  OUTPUT_PATH: Source/KellerAg.Shared.Entities/nuget_output
 
 jobs:
   build-test-pack-publish:
