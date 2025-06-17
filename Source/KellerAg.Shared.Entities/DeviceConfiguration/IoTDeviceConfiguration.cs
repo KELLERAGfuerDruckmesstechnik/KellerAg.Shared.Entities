@@ -223,9 +223,9 @@ namespace KellerAg.Shared.Entities.DeviceConfiguration
         /// 1 = Update after each connection
         /// 2 = Update only when difference larger than <see cref="TimeSynchronizationThreshold"/>
         /// </summary>
-        private int TimeSynchronizationMode { get; set; }
+        public int TimeSynchronizationMode { get; set; }
 
-        private TimeSpan TimeSynchronizationThreshold { get; set; }
+        public TimeSpan TimeSynchronizationThreshold { get; set; }
     }
 
     public class InternetConnectionConfigurationModel
