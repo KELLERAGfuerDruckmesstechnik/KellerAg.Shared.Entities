@@ -26,8 +26,8 @@ namespace KellerAg.Shared.Entities.Device
             set => _address = value == 0 ? (byte) 250 : value;
         }
 
-        public int FirmwareYear { get; }
-        public int FirmwareWeek { get; }
+        public int FirmwareYear { get; set; }
+        public int FirmwareWeek { get; set; }
 
         public ICommunication Communication { get; set; }
 
