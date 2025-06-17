@@ -34,7 +34,7 @@ jobs:
           $csproj = "${{ env.PROJECT_PATH }}"
           $nuspec = "${{ env.NUSPEC_PATH }}"
           $year = (Get-Date).ToString('yy')
-          $runId = "${{ github.run_id }}"
+          $runId = "${{ github.run_number }}"
           $newVersion = "3.$year.$runId"
           Write-Host "New version: $newVersion"
           # Update csproj
