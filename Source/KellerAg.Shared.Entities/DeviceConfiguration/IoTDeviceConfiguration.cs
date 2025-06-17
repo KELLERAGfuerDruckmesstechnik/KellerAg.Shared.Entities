@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.Collections.Generic;
 
 namespace KellerAg.Shared.Entities.DeviceConfiguration
 {
@@ -146,6 +147,18 @@ namespace KellerAg.Shared.Entities.DeviceConfiguration
         public int ActiveChannels { get; set; }
 
         public int PreOnTime { get; set; }
+
+        public IoTModbusChannelConfigurationModel[] ModbusChannels { get; set; }
+    }
+
+    public class IoTModbusChannelConfigurationModel
+    {
+        public int DeviceAddress { get; set; }
+
+        public int Function { get; set; }
+        public byte RegisterHigh { get; set; }
+        public byte RegisterLow { get; set; }
+        public int Datatype { get; set; }
     }
 
     public class EventFunctionConfigurationModel
