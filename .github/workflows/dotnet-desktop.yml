@@ -1,0 +1,72 @@
+name: Build, Test, and Publish NuGet Package
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+env:
+  PROJECT_PATH: Source/KellerAg.Shared.Entities/KellerAg.Shared.Entities.csproj
+  NUSPEC_PATH: Source/KellerAg.Shared.Entities/KellerAg.Shared.Entites.nuspec
+  OUTPUT_PATH: Source/KellerAg.Shared.Entities/nuget_output
+
+jobs:
+  build-test-pack-publish:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Setup NuGet CLI
+        uses: nuget/setup-nuget@v2
+
+      - name: Bump version in .csproj and .nuspec
+        id: bump_version
+        run: |
+          $ErrorActionPreference = "Stop"
+          $csproj = "${{ env.PROJECT_PATH }}"
+          $nuspec = "${{ env.NUSPEC_PATH }}"
+          $year = (Get-Date).ToString('yy')
+          $runId = "${{ github.run_number }}"
+          $newVersion = "3.$year.$runId"
+          Write-Host "New version: $newVersion"
+          # Update csproj
+          (Get-Content $csproj) -replace "<Version>.*?</Version>", "<Version>$newVersion</Version>" |
+            Set-Content $csproj
+          (Get-Content $csproj) -replace "<AssemblyVersion>.*?</AssemblyVersion>", "<AssemblyVersion>$newVersion</AssemblyVersion>" |
+            Set-Content $csproj
+          (Get-Content $csproj) -replace "<FileVersion>.*?</FileVersion>", "<FileVersion>$newVersion</FileVersion>" |
+            Set-Content $csproj
+          # Update nuspec
+          (Get-Content $nuspec) -replace "<version>.*?</version>", "<version>$newVersion</version>" |
+            Set-Content $nuspec
+          echo "new_version=$newVersion" >> $env:GITHUB_OUTPUT
+
+      - name: Restore dependencies
+        run: dotnet restore ${{ env.PROJECT_PATH }}
+
+      - name: Build solution
+        run: dotnet build ${{ env.PROJECT_PATH }} --configuration Release --no-restore
+
+      - name: Run tests
+        run: dotnet test Source --configuration Release --verbosity normal
+
+      - name: Pack NuGet package
+        run: |
+          mkdir -Force "${{ env.OUTPUT_PATH }}"
+          nuget pack "${{ env.NUSPEC_PATH }}" -OutputDirectory "${{ env.OUTPUT_PATH }}"
+
+      - name: Publish NuGet package
+        env:
+          NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+        run: |
+          $nupkg = Get-ChildItem "${{ env.OUTPUT_PATH }}" -Filter "*.nupkg" | Select-Object -First 1
+          if (-not $nupkg) { throw "NuGet package not found." }
+          dotnet nuget push $nupkg.FullName --api-key "$env:NUGET_API_KEY" --source "https://api.nuget.org/v3/index.json" --skip-duplicate
