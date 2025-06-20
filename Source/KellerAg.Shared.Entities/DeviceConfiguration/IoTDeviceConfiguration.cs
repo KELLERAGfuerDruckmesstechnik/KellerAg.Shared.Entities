@@ -249,6 +249,9 @@ namespace KellerAg.Shared.Entities.DeviceConfiguration
         public string DnsServer { get; set; }
         public string SmsServiceCenterNumber { get; set; }
         public string SimPin { get; set; }
+        public int CellularNetworkGeneration  { get; set; }
+        public int CellularIotNetwork { get; set; }
+        public int PdpAuthentication { get; set; }
     }
 
     public class MailConnectionConfigurationModel
