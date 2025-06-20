@@ -75,10 +75,10 @@ namespace KellerAg.Shared.Entities.Channel
         P2_2,
         TOB2_2 = 47,
 
-        AquaMasterFlowRate = 48,
-        AquaMasterPressure,
-        AquaMasterCustomFlowUnits,
-        AquaMasterExternalSupplyVoltage,
+        Modbus1 = 48,
+        Modbus2,
+        Modbus3,
+        Modbus4,
 
         TankContent1 = 52,
         TankContent2,

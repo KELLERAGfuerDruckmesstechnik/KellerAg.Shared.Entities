@@ -77,7 +77,7 @@ namespace KellerAg.Shared.Entities.Channel
                 case 11:
                     return new[] { ChannelType.P1, ChannelType.TOB1, ChannelType.ConductivityTc, ChannelType.T_Conductivity, ChannelType.P1_2, ChannelType.TOB1_2, ChannelType.ConductivityTc_2, ChannelType.T_Conductivity_2, ChannelType.P1_3, ChannelType.TOB1_3, ChannelType.ConductivityTc_3, ChannelType.T_Conductivity_3, ChannelType.PBaro, ChannelType.TBaro, ChannelType.CounterIn };
                 case 12:
-                    return new[] { ChannelType.Pd_P1PBaro, ChannelType.P1, ChannelType.P2, ChannelType.T_Conductivity, ChannelType.TOB1, ChannelType.TOB2, ChannelType.PBaro, ChannelType.TBaro, ChannelType.VoltIn1, ChannelType.VoltIn2, ChannelType.AquaMasterFlowRate, ChannelType.AquaMasterPressure, ChannelType.AquaMasterCustomFlowUnits, ChannelType.AquaMasterExternalSupplyVoltage, ChannelType.CounterIn };
+                    return new[] { ChannelType.Pd_P1PBaro, ChannelType.P1, ChannelType.P2, ChannelType.T_Conductivity, ChannelType.TOB1, ChannelType.TOB2, ChannelType.PBaro, ChannelType.TBaro, ChannelType.VoltIn1, ChannelType.VoltIn2, ChannelType.Modbus1, ChannelType.Modbus2, ChannelType.Modbus3, ChannelType.Modbus4, ChannelType.CounterIn };
                 case 13:
                     return new[] { ChannelType.P1, ChannelType.P2, ChannelType.TOB1, ChannelType.TOB2, ChannelType.P1_2, ChannelType.P2_2, ChannelType.TOB1_2, ChannelType.TOB2_2, ChannelType.PBaro, ChannelType.TBaro, ChannelType.VoltIn1, ChannelType.VoltIn2, ChannelType.CounterIn, ChannelType.Undefined, ChannelType.Undefined };
                 default:

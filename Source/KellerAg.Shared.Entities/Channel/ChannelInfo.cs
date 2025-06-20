@@ -102,10 +102,10 @@ namespace KellerAg.Shared.Entities.Channel
                     new ChannelInfo(ChannelType.P2_2             , (int)ChannelType.P2_2              , "P2 (2)"    , "", "#000000", UnitType.Pressure),
                     new ChannelInfo(ChannelType.TOB2_2           , (int)ChannelType.TOB2_2            , "TOB2 (2)"  , "", "#d50000", UnitType.Temperature),
 
-                    new ChannelInfo(ChannelType.AquaMasterFlowRate             , (int)ChannelType.AquaMasterFlowRate              , "AquaMaster Flow Rate"               , "", "#000000", UnitType.Unknown),
-                    new ChannelInfo(ChannelType.AquaMasterPressure             , (int)ChannelType.AquaMasterPressure              , "AquaMaster Pressure"                , "", "#212121", UnitType.Unknown),
-                    new ChannelInfo(ChannelType.AquaMasterCustomFlowUnits      , (int)ChannelType.AquaMasterCustomFlowUnits       , "AquaMaster Custom Flow Units"       , "", "#454545", UnitType.Unknown),
-                    new ChannelInfo(ChannelType.AquaMasterExternalSupplyVoltage, (int)ChannelType.AquaMasterExternalSupplyVoltage , "AquaMaster External Supply Voltage" , "", "#737373", UnitType.Unknown),
+                    new ChannelInfo(ChannelType.Modbus1          , (int)ChannelType.Modbus1 , "Modbus 1" , "", "#000000", UnitType.Unknown),
+                    new ChannelInfo(ChannelType.Modbus2          , (int)ChannelType.Modbus2 , "Modbus 2" , "", "#212121", UnitType.Unknown),
+                    new ChannelInfo(ChannelType.Modbus3          , (int)ChannelType.Modbus3 , "Modbus 3" , "", "#454545", UnitType.Unknown),
+                    new ChannelInfo(ChannelType.Modbus4          , (int)ChannelType.Modbus4 , "Modbus 4" , "", "#737373", UnitType.Unknown),
 
                     new ChannelInfo(ChannelType.TankContent1                   , (int)ChannelType.TankContent1             , "Tank Content 1", "", "#8c45ef", UnitType.Volume),
                     new ChannelInfo(ChannelType.TankContent2                   , (int)ChannelType.TankContent2             , "Tank Content 2", "", "#2196f3", UnitType.Volume),
