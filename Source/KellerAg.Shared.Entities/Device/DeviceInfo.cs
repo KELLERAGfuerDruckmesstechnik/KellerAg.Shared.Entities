@@ -52,9 +52,7 @@ namespace KellerAg.Shared.Entities.Device
                 new DeviceInfo("LEX", "", 10, 8, DeviceType.Lex1),
                 new DeviceInfo("LEX", "", 10, 10, DeviceType.Lex1),
                 new DeviceInfo("LEO 1 / LEO 2", "", 10, 50, DeviceType.LEO1_2),
-                new DeviceInfo("LEO 1", "ST Mano", 31, 1, DeviceType.LEO1_2),
-                // provisorisch PzMano:
-                // new DeviceInfo("LEO 1", "ST Mano", 31, 1, DeviceType.LEO1_2),
+                new DeviceInfo("LEO Ultimate", "", 31, 1, DeviceType.LEO_Ultimate),
                 
                 // GSM / ARC / ADT
                 new DeviceInfo("GSM-1", "", 9, 0, DeviceType.GSM1),

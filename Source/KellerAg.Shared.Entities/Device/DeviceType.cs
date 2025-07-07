@@ -52,5 +52,6 @@ namespace KellerAg.Shared.Entities.Device
         /// </summary>
         ARC1_lora,
         Bt_Transmitter,
+        LEO_Ultimate,
     }
 }

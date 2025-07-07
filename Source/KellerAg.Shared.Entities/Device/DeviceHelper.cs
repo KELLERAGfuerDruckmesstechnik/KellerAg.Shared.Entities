@@ -98,6 +98,7 @@ namespace KellerAg.Shared.Entities.Device
                 case DeviceType.Leo5:
                 case DeviceType.LeoRecord:
                 case DeviceType.Bt_Transmitter:
+                case DeviceType.LEO_Ultimate:
                     return $"{_prefixLogger}-{deviceType}-{serialNumber}";
                 case DeviceType.ConverterK114:
                 case DeviceType.ConverterK114_BT:
@@ -183,6 +184,7 @@ namespace KellerAg.Shared.Entities.Device
                 case DeviceType.Leo5:
                 case DeviceType.LeoRecord:
                 case DeviceType.Bt_Transmitter:
+                case DeviceType.LEO_Ultimate:
                     return _prefixLogger;
                 case DeviceType.ConverterK114:
                 case DeviceType.ConverterK114_BT:
