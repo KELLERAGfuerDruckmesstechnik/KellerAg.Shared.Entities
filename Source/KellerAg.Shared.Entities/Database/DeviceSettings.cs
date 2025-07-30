@@ -2,6 +2,7 @@
 {
     using System;
     using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// Indicates the configuration state.
@@ -161,16 +162,19 @@
         /// <summary>
         /// #d/0
         /// </summary>
+        [Column(TypeName = "decimal(18,9)")]
         public decimal? GeneralGpsLongitude { get; set; }
 
         /// <summary>
         /// #d/1
         /// </summary>
+        [Column(TypeName = "decimal(18,9)")]
         public decimal? GeneralGpsLatitude { get; set; }
 
         /// <summary>
         /// #d/2
         /// </summary>
+        [Column(TypeName = "decimal(18,9)")]
         public decimal? GeneralGpsAltitude { get; set; }
 
         /// <summary>
@@ -307,11 +311,13 @@
         /// <summary>
         /// #d/g, SMS only
         /// </summary>
+        [Column(TypeName = "decimal(18,9)")]
         public decimal? HardwareMultiplierPressureChannels { get; set; }
 
         /// <summary>
         /// #d/f, SMS only
         /// </summary>
+        [Column(TypeName = "decimal(18,9)")]
         public decimal? HardwareMultiplierTemperatureChannels { get; set; }
 
         /// <summary>
@@ -731,16 +737,19 @@
         /// <summary>
         /// #d/a
         /// </summary>
+        [Column(TypeName = "decimal(18,9)")]
         public decimal? AlarmOnThreshold { get; set; }
 
         /// <summary>
         /// #d/b
         /// </summary>
+        [Column(TypeName = "decimal(18,9)")]
         public decimal? AlarmOffThreshold { get; set; }
 
         /// <summary>
         /// #d/c
         /// </summary>
+        [Column(TypeName = "decimal(18,9)")]
         public decimal? AlarmDeltaThreshold { get; set; }
 
         // Event
@@ -772,16 +781,19 @@
         /// <summary>
         /// #d/i
         /// </summary>
+        [Column(TypeName = "decimal(18,9)")]
         public decimal? EventOnValueThreshold { get; set; }
 
         /// <summary>
         /// #d/j
         /// </summary>
+        [Column(TypeName = "decimal(18,9)")]
         public decimal? EventOffValueThreshold { get; set; }
 
         /// <summary>
         /// #d/k
         /// </summary>
+        [Column(TypeName = "decimal(18,9)")]
         public decimal? EventDeltaValueThreshold { get; set; }
 
         /// <summary>
@@ -794,46 +806,55 @@
         /// <summary>
         /// #d/m
         /// </summary>
+        [Column(TypeName = "decimal(18,9)")]
         public decimal? WaterLevelCalculationEnable { get; set; }
 
         /// <summary>
         /// #d/n
         /// </summary>
+        [Column(TypeName = "decimal(18,9)")]
         public decimal? WaterLevelCalculationLength { get; set; }
 
         /// <summary>
         /// #d/o
         /// </summary>
+        [Column(TypeName = "decimal(18,9)")]
         public decimal? WaterLevelCalculationHeight { get; set; }
 
         /// <summary>
         /// #d/p
         /// </summary>
+        [Column(TypeName = "decimal(18,9)")]
         public decimal? WaterLevelCalculationOffset { get; set; }
 
         /// <summary>
         /// #d/q
         /// </summary>
+        [Column(TypeName = "decimal(18,9)")]
         public decimal? WaterLevelCalculationDensity { get; set; }
 
         /// <summary>
         /// #d/r
         /// </summary>
+        [Column(TypeName = "decimal(18,9)")]
         public decimal? WaterLevelCalculationWidth { get; set; }
 
         /// <summary>
         /// #d/s
         /// </summary>
+        [Column(TypeName = "decimal(18,9)")]
         public decimal? WaterLevelCalculationAngle { get; set; }
 
         /// <summary>
         /// #d/t
         /// </summary>
+        [Column(TypeName = "decimal(18,9)")]
         public decimal? WaterLevelCalculationFormFactor { get; set; }
 
         /// <summary>
         /// #d/u
         /// </summary>
+        [Column(TypeName = "decimal(18,9)")]
         public decimal? WaterLevelCalculationMinCalcHeight { get; set; }
 
         /// <summary>
