@@ -77,9 +77,14 @@ namespace KellerAg.Shared.Entities.FileFormat
         public string DeviceName { get; set; }
 
         /// <summary>
-        /// Mobile needs device typ for identification --> XX.YY (ex. 30.05)"
+        /// Mobile needs device typ for identification --> XX.YY (ex. 30.05)
         /// </summary>
         public string DeviceType { get; set; }
+
+        /// <summary>
+        /// Firmware version of the origin device --> Year.Week (ex. 25.08)
+        /// </summary>
+        public string DeviceFirmwareVersion { get; set; }
 
         /// <summary>
         /// The UTC time the file will be created
