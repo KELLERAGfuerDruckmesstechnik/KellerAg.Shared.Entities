@@ -28,6 +28,8 @@
                     return ".pdf";
                 case Filetype.PressureSuiteConfigurationFormat:
                     return ".psuitec";
+                case Filetype.Dx5:
+                    return ".dx5";
                 default:
                     return ".txt";
             }
@@ -58,6 +60,8 @@
                     return "PDF (*.pdf)";
                 case Filetype.PressureSuiteConfigurationFormat:
                     return "PressureSuite device configuration (*.psuitec)";
+                case Filetype.Dx5:
+                    return "Logger5 (*.dx5)";
                 default:
                     return "Textfile (*.txt)";
             }
