@@ -20,5 +20,6 @@
         /// PressureSuite Device configuration file format (Json)
         /// </summary>
         PressureSuiteConfigurationFormat = 10,
+        Dx5      = 11
     }
 }
