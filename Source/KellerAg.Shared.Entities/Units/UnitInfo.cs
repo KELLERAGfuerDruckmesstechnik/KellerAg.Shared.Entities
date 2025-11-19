@@ -31,7 +31,8 @@ public class UnitInfo : IEquatable<UnitInfo>
                         new UnitInfo("pound-force per square inch", "PSI", UnitType.Pressure, 14.5038, 0),
                         new UnitInfo("Megapascal", "MPa", UnitType.Pressure, 0.1, 0),
                         new UnitInfo("kilopascal", "kPa", UnitType.Pressure, 100, 0),
-                        new UnitInfo("pascal", "Pa", UnitType.Pressure, 100000, 0)
+                        new UnitInfo("pascal", "Pa", UnitType.Pressure, 100000, 0),
+                        new UnitInfo("kilopond per square centimeter", "kp/cm²", UnitType.Pressure, 1.01972, 0)
                     };
                 break;
             case UnitType.Length:
