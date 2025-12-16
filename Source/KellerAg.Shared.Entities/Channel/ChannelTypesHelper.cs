@@ -45,6 +45,10 @@ namespace KellerAg.Shared.Entities.Channel
                 case DeviceType.ECO1:
                 case DeviceType.Lex1:
                     return new[] { ChannelType.Undefined, ChannelType.P1, ChannelType.Undefined, ChannelType.Undefined, ChannelType.TOB1, ChannelType.Undefined, ChannelType.P1_Min, ChannelType.P1_Max };
+                case DeviceType.ConverterK114:
+                case DeviceType.ConverterK114_BT:
+                case DeviceType.ConverterK114_M:
+                    return new[] { ChannelType.Undefined, ChannelType.Converter_Voltage_In, ChannelType.Converter_Current_Out, ChannelType.Converter_Voltage_Out, ChannelType.Converter_Voltage_USB };
                 default:
                     return null;
             }
