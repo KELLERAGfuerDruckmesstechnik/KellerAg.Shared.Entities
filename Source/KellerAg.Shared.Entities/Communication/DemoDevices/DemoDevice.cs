@@ -11,7 +11,7 @@ namespace KellerAg.Shared.Entities.Communication.DemoDevices
         {
             Name = deviceName;
             Memory = new DeviceMemory(file);
-            Configuration = new DeviceConfiguration(file);
+            Configuration = new DemoDeviceConfiguration(file);
             var rand = new Random();
             _current0 = rand.Next(20);
             _current1 = rand.Next(20);
@@ -35,7 +35,7 @@ namespace KellerAg.Shared.Entities.Communication.DemoDevices
 
         internal DeviceMemory Memory;
 
-        internal DeviceConfiguration Configuration;
+        internal DemoDeviceConfiguration Configuration;
 
         private double _current0;
         private double _current1;

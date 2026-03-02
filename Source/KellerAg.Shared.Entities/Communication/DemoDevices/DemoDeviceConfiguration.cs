@@ -5,10 +5,10 @@ using System.Linq;
 
 namespace KellerAg.Shared.Entities.Communication.DemoDevices
 {
-    public class DeviceConfiguration
+    internal class DemoDeviceConfiguration
     {
 
-        public DeviceConfiguration(string file)
+        internal DemoDeviceConfiguration(string file)
         {
             _functionsWithoutIndex = new List<int> { 48, 69 };
             InitializeFile(file);
