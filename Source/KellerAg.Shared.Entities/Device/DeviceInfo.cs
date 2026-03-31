@@ -80,6 +80,7 @@ namespace KellerAg.Shared.Entities.Device
                 new DeviceInfo("Series 30X2", "", 5, 21, DeviceType.S30X2),
                 new DeviceInfo("Series 30X2a", "", 5, 22, DeviceType.S30X2),
                 new DeviceInfo("Series 30X2P", "", 5, 23, DeviceType.S30X2),
+                new DeviceInfo("Series 30X2P", "", 5, 24, DeviceType.S30X2),
                 new DeviceInfo("Series 30 Hummingbird", "", 5, 40, DeviceType.S30X2),
                 new DeviceInfo("Series 30 DACS3", "", 5, 50, DeviceType.S30X2),
                 new DeviceInfo("Series 30 DACS2", "", 5, 52, DeviceType.S30X2),
