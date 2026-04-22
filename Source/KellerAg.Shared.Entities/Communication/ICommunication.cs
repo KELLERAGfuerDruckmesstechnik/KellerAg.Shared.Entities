@@ -59,6 +59,16 @@ namespace KellerAg.Shared.Entities.Communication
         byte[] Send(byte[] dataSend, byte endSign);
 
         /// <summary>
+        /// Data send and receive over interface with the message length in the response itself
+        /// </summary>
+        /// <param name="dataSend">data to send</param>
+        /// <param name="rcfBuffer">received data</param>
+        /// <param name="numberOfBytesIndex">index in the response  where the byte count is located </param>
+        /// <param name="numberOfBytesLength">length of the byte count in the response (default: 2)</param>
+        /// <returns>received bytes</returns>
+        byte[] SendSelfContainedPacket(byte[] dataSend, out byte[] rcfBuffer, int numberOfBytesIndex, int numberOfBytesLength = 2);
+
+        /// <summary>
         /// Daten über die Schnittstelle senden und empfangen
         /// </summary>
         /// <param name="command">gesendete Daten</param>
@@ -73,7 +83,7 @@ namespace KellerAg.Shared.Entities.Communication
         /// <param name="rcfBuffer">empfangene Daten</param>
         /// <param name="endSign">empfangen bis zu diesem Zeichen</param>
         void send(byte[] command, out byte[] rcfBuffer, byte endSign);
-
+        
         /// <summary>
         /// Öffnet die Schnittstelle
         /// </summary>
