@@ -45,7 +45,7 @@ namespace KellerAg.Shared.Entities.Communication.DemoDevices
         private double _current5;
         private double _currentDefault;
 
-        public byte[] SendSelfContainedPacket(byte[] dataSend, out byte[] rcfBuffer, int numberOfBytesIndex,
+        public byte[] SendSelfContainedPacket(byte[] dataSend, int numberOfBytesIndex,
             int numberOfBytesLength = 2)
         {
             throw new NotImplementedException();

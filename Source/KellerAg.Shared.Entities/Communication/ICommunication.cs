@@ -66,7 +66,7 @@ namespace KellerAg.Shared.Entities.Communication
         /// <param name="numberOfBytesIndex">index in the response  where the byte count is located </param>
         /// <param name="numberOfBytesLength">length of the byte count in the response (default: 2)</param>
         /// <returns>received bytes</returns>
-        byte[] SendSelfContainedPacket(byte[] dataSend, out byte[] rcfBuffer, int numberOfBytesIndex, int numberOfBytesLength = 2);
+        byte[] SendSelfContainedPacket(byte[] dataSend, int numberOfBytesIndex, int numberOfBytesLength = 2);
 
         /// <summary>
         /// Daten über die Schnittstelle senden und empfangen
