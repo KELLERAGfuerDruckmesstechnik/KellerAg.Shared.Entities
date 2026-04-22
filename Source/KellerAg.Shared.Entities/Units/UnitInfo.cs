@@ -32,7 +32,13 @@ public class UnitInfo : IEquatable<UnitInfo>
                         new UnitInfo("Megapascal", "MPa", UnitType.Pressure, 0.1, 0),
                         new UnitInfo("kilopascal", "kPa", UnitType.Pressure, 100, 0),
                         new UnitInfo("pascal", "Pa", UnitType.Pressure, 100000, 0),
-                        new UnitInfo("kilopond per square centimeter", "kp/cm²", UnitType.Pressure, 1.01972, 0)
+                        new UnitInfo("kilopond per square centimeter", "kp/cm²", UnitType.Pressure, 1.01972, 0),
+                        new UnitInfo("meters of water", "mH2o", UnitType.Pressure, 10.1972, 0), //@4°C
+                        new UnitInfo("millimeters of water", "mmH2o", UnitType.Pressure, 10197.2, 0), //@4°C
+                        new UnitInfo("inches of water", "inH2o", UnitType.Pressure, 1000, 0), //@4°C
+                        new UnitInfo("feet of water", "ftH2o", UnitType.Pressure, 1000, 0), //@4°C
+                        new UnitInfo("millimeters of mercury", "mmHg", UnitType.Pressure, 750.062, 0), //@0°C
+                        new UnitInfo("inches of mercury", "inHg", UnitType.Pressure, 29.53, 0), //@0°C
                     };
                 break;
             case UnitType.Length:
