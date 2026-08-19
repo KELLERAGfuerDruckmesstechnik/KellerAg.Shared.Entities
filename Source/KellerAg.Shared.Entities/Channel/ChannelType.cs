@@ -104,6 +104,9 @@ namespace KellerAg.Shared.Entities.Channel
         FlowCalculation2,
         FlowCalculation3,
 
+        P_Absolute = 80,
+        P_Relative = 81,
+
         /// <summary>
         /// Generic Calculation channel type used by the KELLER FileFormat to
         /// identify all kinds of calculation including water calculations

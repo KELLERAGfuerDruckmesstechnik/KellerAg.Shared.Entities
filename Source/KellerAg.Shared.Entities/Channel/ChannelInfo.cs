@@ -127,9 +127,12 @@ namespace KellerAg.Shared.Entities.Channel
                     new ChannelInfo(ChannelType.P2_Min                         , (int)ChannelType.P2_Min                   , "P2 Min"          , "", "#000000", UnitType.Pressure),
                     new ChannelInfo(ChannelType.P2_Max                         , (int)ChannelType.P2_Max                   , "P2 Max"          , "", "#000000", UnitType.Pressure),
 
-                    new ChannelInfo(ChannelType.FlowCalculation1               , (int)ChannelType.FlowCalculation1                   , "Flow Calculation 1"          , "", "#2196f3", UnitType.Flow),
-                    new ChannelInfo(ChannelType.FlowCalculation2               , (int)ChannelType.FlowCalculation2                   , "Flow Calculation 2"          , "", "#005ca8", UnitType.Flow),
-                    new ChannelInfo(ChannelType.FlowCalculation3               , (int)ChannelType.FlowCalculation3                   , "Flow Calculation 3"          , "", "#003866", UnitType.Flow),
+                    new ChannelInfo(ChannelType.FlowCalculation1               , (int)ChannelType.FlowCalculation1         , "Flow Calculation 1"          , "", "#2196f3", UnitType.Flow),
+                    new ChannelInfo(ChannelType.FlowCalculation2               , (int)ChannelType.FlowCalculation2         , "Flow Calculation 2"          , "", "#005ca8", UnitType.Flow),
+                    new ChannelInfo(ChannelType.FlowCalculation3               , (int)ChannelType.FlowCalculation3         , "Flow Calculation 3"          , "", "#003866", UnitType.Flow),
+                    
+                    new ChannelInfo(ChannelType.P_Absolute                     , (int)ChannelType.P_Absolute               , "Absolute Pressure"          , "", "#107c10", UnitType.Pressure),
+                    new ChannelInfo(ChannelType.P_Relative                     , (int)ChannelType.P_Relative               , "Relative Pressure"          , "", "#107c10", UnitType.Pressure),
 
                     new ChannelInfo(ChannelType.Calculation                    , (int)ChannelType.Calculation              , "Calculation"     , "Calculated Channel", "#000000", UnitType.Unknown)
         };
