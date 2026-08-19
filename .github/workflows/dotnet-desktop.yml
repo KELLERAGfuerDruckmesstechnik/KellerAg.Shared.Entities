@@ -71,6 +71,16 @@ jobs:
         uses: NuGet/login@v1
         with:
           user: cBashTn
+
+      - name: Debug login output
+        shell: pwsh
+        run: |
+          if ("${{ steps.login.outputs.NUGET_API_KEY }}" -eq "") {
+            Write-Error "NUGET_API_KEY is empty!"
+          }
+          else {
+            Write-Host "NUGET_API_KEY received."
+          }
       
       - name: Publish NuGet package
         shell: pwsh
