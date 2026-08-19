@@ -15,6 +15,9 @@ jobs:
   build-test-pack-publish:
     runs-on: windows-latest
 
+    permissions:
+      id-token: write
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -63,10 +66,33 @@ jobs:
           mkdir -Force "${{ env.OUTPUT_PATH }}"
           nuget pack "${{ env.NUSPEC_PATH }}" -OutputDirectory "${{ env.OUTPUT_PATH }}"
 
+      - name: NuGet Login
+        id: login
+        uses: NuGet/login@v1
+        with:
+          user: cBashTn
+
+      - name: Debug login output
+        shell: pwsh
+        run: |
+          if ("${{ steps.login.outputs.NUGET_API_KEY }}" -eq "") {
+            Write-Error "NUGET_API_KEY is empty!"
+          }
+          else {
+            Write-Host "NUGET_API_KEY received."
+          }
+      
       - name: Publish NuGet package
-        env:
-          NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+        shell: pwsh
         run: |
           $nupkg = Get-ChildItem "${{ env.OUTPUT_PATH }}" -Filter "*.nupkg" | Select-Object -First 1
-          if (-not $nupkg) { throw "NuGet package not found." }
-          dotnet nuget push $nupkg.FullName --api-key "$env:NUGET_API_KEY" --source "https://api.nuget.org/v3/index.json" --skip-duplicate
+
+          if (-not $nupkg) {
+            throw "NuGet package not found."
+          }
+          
+          dotnet nuget push $nupkg.FullName `
+            --api-key "${{ steps.login.outputs.NUGET_API_KEY }}" `
+            --source "https://api.nuget.org/v3/index.json" `
+            --skip-duplicate
+            
