@@ -35,7 +35,7 @@ namespace KellerAg.Shared.Entities.Channel
                 case DeviceType.ADT1_cellular:
                     return ioTDeviceTypeId.HasValue ? GetAdtDeviceStandardChannelsStatic(ioTDeviceTypeId.Value) : DefaultTypes;
                 case DeviceType.LEO_Ultimate:
-                    return new[] { ChannelType.P_Relative, ChannelType.P_Absolute, ChannelType.Undefined, ChannelType.Undefined, ChannelType.T, ChannelType.Undefined, ChannelType.Undefined, ChannelType.Undefined, ChannelType.Undefined, ChannelType.Undefined, ChannelType.Undefined, ChannelType.Undefined, ChannelType.Undefined, ChannelType.Undefined, ChannelType.Undefined, ChannelType.Undefined, ChannelType.Undefined };
+                    return new[] { ChannelType.Undefined, ChannelType.P_Absolute, ChannelType.Undefined, ChannelType.Undefined, ChannelType.T, ChannelType.Undefined, ChannelType.Undefined, ChannelType.Undefined, ChannelType.Undefined, ChannelType.Undefined, ChannelType.Undefined, ChannelType.Undefined, ChannelType.Undefined, ChannelType.Undefined, ChannelType.P_Relative, ChannelType.Undefined, ChannelType.Undefined };
                 case DeviceType.LEO1_2:
                 case DeviceType.LeoVolvo:
                 case DeviceType.LeoIsler:
