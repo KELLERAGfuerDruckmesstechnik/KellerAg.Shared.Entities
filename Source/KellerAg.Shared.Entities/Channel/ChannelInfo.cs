@@ -131,8 +131,8 @@ namespace KellerAg.Shared.Entities.Channel
                     new ChannelInfo(ChannelType.FlowCalculation2               , (int)ChannelType.FlowCalculation2         , "Flow Calculation 2"          , "", "#005ca8", UnitType.Flow),
                     new ChannelInfo(ChannelType.FlowCalculation3               , (int)ChannelType.FlowCalculation3         , "Flow Calculation 3"          , "", "#003866", UnitType.Flow),
                     
-                    new ChannelInfo(ChannelType.P_Absolute                     , (int)ChannelType.P_Absolute               , "P_Abs"          , "", "#107c10", UnitType.Pressure),
-                    new ChannelInfo(ChannelType.P_Relative                     , (int)ChannelType.P_Relative               , "P_Rel"          , "", "#003b00", UnitType.Pressure),
+                    new ChannelInfo(ChannelType.P_Absolute                     , (int)ChannelType.P_Absolute               , "P Abs"          , "", "#107c10", UnitType.Pressure),
+                    new ChannelInfo(ChannelType.P_Relative                     , (int)ChannelType.P_Relative               , "P Rel"          , "", "#003b00", UnitType.Pressure),
 
                     new ChannelInfo(ChannelType.Calculation                    , (int)ChannelType.Calculation              , "Calculation"     , "Calculated Channel", "#000000", UnitType.Unknown)
         };
