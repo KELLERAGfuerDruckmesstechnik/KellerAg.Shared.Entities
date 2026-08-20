@@ -133,12 +133,19 @@ public class DeviceTypes : Dictionary<DeviceType, string>
                                                        IsIotDevice(type);
 
     /// <summary>
+    /// Returns true if the device is LEO Ultimate
+    /// </summary>
+    /// <param name="type"></param>
+    /// <returns></returns>
+    public static bool IsLeoUltimateDevice(DeviceType type) => type == DeviceType.LEO_Ultimate;
+                                              
+
+    /// <summary>
     /// Returns true if the device is a LoRa device (ADT1, ARC1_LR)
     /// </summary>
     /// <param name="type"></param>
     /// <returns></returns>
-    public static bool IsLoRaDevice(DeviceType type) => type == DeviceType.ARC1_lora ||
-                                                        type == DeviceType.ADT1;
+    public static bool IsLoRaDevice(DeviceType type) => type == DeviceType.ARC1_lora || type == DeviceType.ADT1;
 
     /// <summary>
     /// Returns true if the device is a Cellular device (ADT1_cellular, GSM1, GSM2, GSM3, ARC1)
